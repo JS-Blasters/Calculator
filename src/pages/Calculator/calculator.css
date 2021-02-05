@@ -1,7 +1,7 @@
 .calc-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(6, 1fr);
+  grid-template-rows: repeat(7, 1fr);
 }
 .calc-container .display {
   grid-column: 1/5;
