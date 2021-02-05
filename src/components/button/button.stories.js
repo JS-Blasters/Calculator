@@ -1,11 +1,11 @@
 import "./button.css";
-import buttonText from "./button-text.html";
-import buttonLogo from "./button-logo.html";
+import { createButtonNumber } from "./button-number";
+import { createButtonOperator } from "./button-operator";
 
 export default {
   title: "Components/Button",
   parameters: { layout: "centered" },
 };
 
-export const withText = () => buttonText;
-export const withLogo = () => buttonLogo;
+export const buttonnum = () => createButtonNumber();
+export const buttonop = () => createButtonOperator();
