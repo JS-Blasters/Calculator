@@ -1,14 +1,6 @@
-.calc-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(7, 1fr);
-}
-.calc-container .display {
-  grid-column: 1/5;
-}
-.themeSwitchContainer {
-  grid-column: 1/5;
-}
+/*
+From: https://www.w3schools.com/howto/howto_css_switch.asp
+*/
 
 /* The switch - the box around the slider */
 .switch {

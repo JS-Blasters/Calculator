@@ -2,11 +2,18 @@ import { createElement } from "../../utils/createElement";
 import { createButtonNumber } from "../../components/button/button-number";
 import { createDisplay } from "../../components/display/display";
 import { createButtonOperator } from "../../components/button/button-operator";
+import { createSwitchFunction} from "../../components/switch/switch";
 
 const display = createDisplay();
 const displayResult = createDisplay();
 
 let lastKey = "";
+
+function toggleBtnLable (id) {
+  const status = document.getElementById(id).checked;
+  const elements =  document.getElementsByClassName('btn')
+  elements.forEach(element => element.style = (status) ? "font-size: 0px" : null);
+}
 
 export function result(value) {
   if (value === "=") {
@@ -31,7 +38,6 @@ export function displayadd(number) {
 
 function evaluate(str) {
   str = str.replace(/[^\d+-.\\/\\*]*/g, "");
-
   return eval(str);
 }
 
@@ -68,6 +74,29 @@ export function createCalculator() {
       createButtonNumber(0),
       createButtonNumber("."),
       createButtonOperator("="),
+      createElement('div',{
+        className: 'themeSwitchContainer',
+        onclick: () => toggleBtnLable('themeToggle'),
+        children:[
+      createElement('span',{
+        innerText: 'Regular'
+      }),
+      createSwitchFunction('themeToggle'),
+      createElement('span',{
+        innerText: 'Leon'
+      }),
+    ]
+  })
     ],
-  });
+  })
 }
+
+
+/*
+<label class="switch">
+  <input type="checkbox">
+  <span class="slider round"></span>
+</label>
+
+
+*/

@@ -3,7 +3,7 @@ import { displayadd } from "../../pages/Calculator/calculator";
 
 export function createButtonNumber(number) {
   return createElement("button", {
-    className: "btn--num",
+    className: "btn btn--num",
     innerText: number,
     onclick: function () {
       displayadd(number);
