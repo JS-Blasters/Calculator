@@ -4,5 +4,5 @@
 }
 
 .btn {
-  background-color: lightgray;
+  background-color: var(--bg-btn-color);
 }

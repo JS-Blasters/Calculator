@@ -13,7 +13,7 @@ function toggleBtnLable(id) {
   const status = document.getElementById(id).checked;
   const elements = document.getElementsByClassName("btn");
   elements.forEach(
-    (element) => (element.style = status ? "color: lightgray" : null)
+    (element) => (element.style = status ? "color: var(--bg-btn-color)" : null)
   );
 }
 
