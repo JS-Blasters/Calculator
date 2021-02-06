@@ -1,13 +1,29 @@
 import { createElement } from "../../utils/createElement";
-import { createButtonNumber } from "../../components/button/button-number";
+import {
+  createButtonClear,
+  createButtonNumber,
+} from "../../components/button/button-number";
 import { createDisplay } from "../../components/display/display";
 import { createButtonOperator } from "../../components/button/button-operator";
+import { createSwitchFunction } from "../../components/switch/switch";
 
 const display = createDisplay();
 const displayResult = createDisplay();
 
 let lastKey = "";
 
+function toggleBtnLable(id) {
+  const status = document.getElementById(id).checked;
+  const elements = document.getElementsByClassName("btn");
+  elements.forEach(
+    (element) => (element.style = status ? "color: var(--bg-btn-color)" : null)
+  );
+}
+
+export function reset() {
+  display.innerText = "0";
+  displayResult.innerText = "0";
+}
 export function result(value) {
   if (value === "=") {
     display.innerText = displayResult.innerText;
@@ -31,7 +47,6 @@ export function displayadd(number) {
 
 function evaluate(str) {
   str = str.replace(/[^\d+-.\\/\\*]*/g, "");
-
   return eval(str);
 }
 
@@ -48,7 +63,7 @@ export function createCalculator() {
     children: [
       display,
       displayResult,
-      createButtonOperator("C"),
+      createButtonClear("C"),
       createButtonNumber("+/-"),
       createButtonOperator("%"),
       createButtonNumber("/"),
@@ -68,6 +83,28 @@ export function createCalculator() {
       createButtonNumber(0),
       createButtonNumber("."),
       createButtonOperator("="),
+      createElement("div", {
+        className: "themeSwitchContainer",
+        onclick: () => toggleBtnLable("themeToggle"),
+        children: [
+          createElement("span", {
+            innerText: "Regular",
+          }),
+          createSwitchFunction("themeToggle"),
+          createElement("span", {
+            innerText: "Leon",
+          }),
+        ],
+      }),
     ],
   });
 }
+
+/*
+<label class="switch">
+  <input type="checkbox">
+  <span class="slider round"></span>
+</label>
+
+
+*/

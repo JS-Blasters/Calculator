@@ -2,3 +2,7 @@
 }
 .btn--op {
 }
+
+.btn {
+  background-color: var(--bg-btn-color);
+}
