@@ -2,17 +2,19 @@ import { createElement } from "../../utils/createElement";
 import { createButtonNumber } from "../../components/button/button-number";
 import { createDisplay } from "../../components/display/display";
 import { createButtonOperator } from "../../components/button/button-operator";
-import { createSwitchFunction} from "../../components/switch/switch";
+import { createSwitchFunction } from "../../components/switch/switch";
 
 const display = createDisplay();
 const displayResult = createDisplay();
 
 let lastKey = "";
 
-function toggleBtnLable (id) {
+function toggleBtnLable(id) {
   const status = document.getElementById(id).checked;
-  const elements =  document.getElementsByClassName('btn')
-  elements.forEach(element => element.style = (status) ? "font-size: 0px" : null);
+  const elements = document.getElementsByClassName("btn");
+  elements.forEach(
+    (element) => (element.style = status ? "color: lightgray" : null)
+  );
 }
 
 export function result(value) {
@@ -74,23 +76,22 @@ export function createCalculator() {
       createButtonNumber(0),
       createButtonNumber("."),
       createButtonOperator("="),
-      createElement('div',{
-        className: 'themeSwitchContainer',
-        onclick: () => toggleBtnLable('themeToggle'),
-        children:[
-      createElement('span',{
-        innerText: 'Regular'
+      createElement("div", {
+        className: "themeSwitchContainer",
+        onclick: () => toggleBtnLable("themeToggle"),
+        children: [
+          createElement("span", {
+            innerText: "Regular",
+          }),
+          createSwitchFunction("themeToggle"),
+          createElement("span", {
+            innerText: "Leon",
+          }),
+        ],
       }),
-      createSwitchFunction('themeToggle'),
-      createElement('span',{
-        innerText: 'Leon'
-      }),
-    ]
-  })
     ],
-  })
+  });
 }
-
 
 /*
 <label class="switch">
