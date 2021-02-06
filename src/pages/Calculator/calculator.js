@@ -88,11 +88,13 @@ export function createCalculator() {
         onclick: () => toggleBtnLable("themeToggle"),
         children: [
           createElement("span", {
-            innerText: "Regular",
+            className: "regular-img",
+            innerText: " ",
           }),
           createSwitchFunction("themeToggle"),
           createElement("span", {
-            innerText: "Leon",
+            className: "leon-img",
+            innerText: " ",
           }),
         ],
       }),

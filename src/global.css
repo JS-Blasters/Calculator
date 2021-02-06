@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+@font-face {
+  font-family: "Digital-7";
+  src: url(../../Calculator/src/assets/fonts/digital7.regular.ttf);
+}
 
 *,
 *::after,
