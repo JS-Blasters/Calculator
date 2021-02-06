@@ -10,6 +10,7 @@
   grid-column: 1/5;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 /* The switch - the box around the slider */
@@ -73,4 +74,18 @@ input:checked + .slider::before {
 
 .slider.round::before {
   border-radius: 50%;
+}
+
+.leon-img {
+  background-image: url(../../assets/leon.png);
+  background-size: cover;
+  width: 2em;
+  height: 2em;
+}
+
+.regular-img {
+  background-image: url(../../assets/regular.png);
+  background-size: cover;
+  width: 2em;
+  height: 2em;
 }
