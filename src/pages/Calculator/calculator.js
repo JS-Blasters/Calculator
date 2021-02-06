@@ -41,7 +41,7 @@ export function displayadd(number) {
     display.innerText = "";
     lastKey = number;
   }
-  display.innerText = display.innerText + number;
+  display.innerText += number;
   displayResult.innerText = evaluate(display.innerText);
 }
 
