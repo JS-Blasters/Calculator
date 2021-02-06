@@ -1,11 +1,31 @@
 .calc-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(7, 1fr);
+  grid-template-rows: 2.1em 2.1em repeat(6, 1fr);
+  background-color: rgb(191, 202, 199);
+  padding: 1em 1em 0 1em;
 }
 .calc-container .display {
   grid-column: 1/5;
+  background-color: #b2c9c0;
+  color: #022c29;
+  font-family: "Digital-7";
+  font-size: 2em;
 }
+
+.calc-container .display:nth-child(1) {
+  border-top: solid 0.1em rgb(80, 80, 80);
+  border-left: solid 0.1em rgb(80, 80, 80);
+  border-right: solid 0.1em rgb(80, 80, 80);
+}
+
+.calc-container .display:nth-child(2) {
+  border-bottom: solid 0.1em rgb(80, 80, 80);
+  border-left: solid 0.1em rgb(80, 80, 80);
+  border-right: solid 0.1em rgb(80, 80, 80);
+  margin-bottom: 0.1em;
+}
+
 .themeSwitchContainer {
   grid-column: 1/5;
   display: flex;
