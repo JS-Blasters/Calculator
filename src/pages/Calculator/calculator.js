@@ -1,5 +1,8 @@
 import { createElement } from "../../utils/createElement";
-import { createButtonNumber } from "../../components/button/button-number";
+import {
+  createButtonClear,
+  createButtonNumber,
+} from "../../components/button/button-number";
 import { createDisplay } from "../../components/display/display";
 import { createButtonOperator } from "../../components/button/button-operator";
 import { createSwitchFunction } from "../../components/switch/switch";
@@ -17,6 +20,10 @@ function toggleBtnLable(id) {
   );
 }
 
+export function reset() {
+  display.innerText = "0";
+  displayResult.innerText = "0";
+}
 export function result(value) {
   if (value === "=") {
     display.innerText = displayResult.innerText;
@@ -56,7 +63,7 @@ export function createCalculator() {
     children: [
       display,
       displayResult,
-      createButtonOperator("C"),
+      createButtonClear("C"),
       createButtonNumber("+/-"),
       createButtonOperator("%"),
       createButtonNumber("/"),
