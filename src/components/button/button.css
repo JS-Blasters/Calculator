@@ -6,3 +6,14 @@
 .btn {
   background-color: var(--bg-btn-color);
 }
+
+@media (prefers-color-scheme: dark) {
+  .btn {
+    background-color: var(--bg-btn-color);
+  }
+}
+@media (prefers-dark-interface) {
+  .btn {
+    background-color: var(--bg-btn-color);
+  }
+}

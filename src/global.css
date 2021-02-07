@@ -12,6 +12,7 @@
 
 :root {
   --bg-btn-color: lightgray;
+  --bg-btn-color-dark: gray;
 }
 
 html {
