@@ -12,28 +12,29 @@ const displayResult = createDisplay();
 
 let lastKey = "";
 
-/*
-Quelle: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace
-*/
+// /*
+// Quelle: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace
+// */
 
-// console.log(lastNumberPlusMinusToggle('5+3+-3566'));
-// console.log(lastNumberPlusMinusToggle('5+3+3566'));
+// // console.log(lastNumberPlusMinusToggle('5+3+-3566'));
+// // console.log(lastNumberPlusMinusToggle('5+3+3566'));
 
-// let str = '5+3+-3566';
-// let str = '5+3*-3566';
+// // let str = '5+3+-3566';
+// // let str = '5+3*-3566';
 
-function lastNumberPlusMinusToggle (str) {
-str = str.split("").reverse().join("") ;
-str = str.replace(/(\d*)([-\\*\\+\\/]*)/, (m,p1,p2) => p1 + ((p2.length === 2 && p2[0] === '-' ) ? '' + p2[1] : '-' + p2[0]));
-str = str.split("").reverse().join("") ;
-return str;
-}
+// function lastNumberPlusMinusToggle (str) {
+// str = str.split("").reverse().join("") ;
+// str = str.replace(/(\d*)([-\\*\\+\\/]*)/, (m,p1,p2) => p1 + ((p2.length === 2 && p2[0] === '-' ) ? '' + p2[1] : '-' + p2[0]));
+// str = str.split("").reverse().join("") ;
+// return str;
+// }
 
 function toggleBtnLable(id) {
   const status = document.getElementById(id).checked;
   const elements = document.getElementsByClassName("btn");
   elements.forEach(
-    (element) => (element.style = status ? "color: var(--bg-btn-font-color)" : null)
+    (element) =>
+      (element.style = status ? "color: var(--bg-btn-font-color)" : null)
   );
 }
 
