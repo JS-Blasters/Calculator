@@ -9,7 +9,6 @@ export function createButtonNumber(number) {
     innerText: number,
     onclick: function () {
       displayadd(number);
-      //   display.innerText = number;
     },
   });
 }
