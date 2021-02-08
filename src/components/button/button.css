@@ -5,15 +5,5 @@
 
 .btn {
   background-color: var(--bg-btn-color);
-}
-
-@media (prefers-color-scheme: dark) {
-  .btn {
-    background-color: var(--bg-btn-color);
-  }
-}
-@media (prefers-dark-interface) {
-  .btn {
-    background-color: var(--bg-btn-color);
-  }
+  /* rgba(220,160,140,0.5); */
 }
