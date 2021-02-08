@@ -1,7 +1,7 @@
 import { createElement } from "../../utils/createElement";
-import { displayadd } from "../../pages/Calculator/calculator";
-import { reset } from "../../pages/Calculator/calculator";
-import { result } from "../../pages/Calculator/calculator";
+import { displayadd, reset, result } from "../../pages/Calculator/calculator";
+// import { reset } from "../../pages/Calculator/calculator";
+// import { result } from "../../pages/Calculator/calculator";
 
 export function createButtonNumber(number) {
   return createElement("button", {
@@ -31,4 +31,7 @@ export function createButtonEqual(operator) {
       result(operator);
     },
   });
+}
+export function createButtonsNumber(array) {
+  return array.map((kackhaufen) => createButtonNumber(kackhaufen));
 }

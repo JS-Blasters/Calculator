@@ -3,6 +3,7 @@ import {
   createButtonClear,
   createButtonNumber,
   createButtonEqual,
+  createButtonsNumber,
 } from "../../components/button/button-number";
 import { createDisplay } from "../../components/display/display";
 import { createSwitchFunction } from "../../components/switch/switch";
@@ -78,17 +79,11 @@ export function createCalculator() {
       createButtonNumber("+/-"),
       createButtonClear("%"),
       createButtonNumber("/"),
-      createButtonNumber(7),
-      createButtonNumber(8),
-      createButtonNumber(9),
+      ...createButtonsNumber([7, 8, 9]),
       createButtonNumber("x"),
-      createButtonNumber(4),
-      createButtonNumber(5),
-      createButtonNumber(6),
+      ...createButtonsNumber([4, 5, 6]),
       createButtonNumber("-"),
-      createButtonNumber(1),
-      createButtonNumber(2),
-      createButtonNumber(3),
+      ...createButtonsNumber([1, 2, 3]),
       createButtonNumber("+"),
       createElement("span", {}),
       createButtonNumber(0),
