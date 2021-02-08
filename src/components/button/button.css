@@ -1,9 +1,3 @@
-.btn--num {
-}
-.btn--op {
-}
-
 .btn {
   background-color: var(--bg-btn-color);
-  /* rgba(220,160,140,0.5); */
 }

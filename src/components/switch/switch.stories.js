@@ -1,5 +1,4 @@
 import "./switch.css";
-// import { createButtonNumber } from "./button-number";
 import { createSwitchFunction } from "./switch";
 
 export default {
@@ -8,4 +7,3 @@ export default {
 };
 
 export const createSwitch = () => createSwitchFunction();
-
