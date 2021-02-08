@@ -2,9 +2,9 @@ import { createElement } from "../../utils/createElement";
 import {
   createButtonClear,
   createButtonNumber,
+  createButtonEqual,
 } from "../../components/button/button-number";
 import { createDisplay } from "../../components/display/display";
-import { createButtonOperator } from "../../components/button/button-operator";
 import { createSwitchFunction } from "../../components/switch/switch";
 
 const display = createDisplay();
@@ -68,14 +68,7 @@ function evaluate(str) {
   return eval(str);
 }
 
-//zahlen auf display auslesen
-// auf plus = zahl zwischenspeichern
-//display leeren
-//
-
 export function createCalculator() {
-  // display.innerText = "";
-
   return createElement("div", {
     className: "calc-container",
     children: [
@@ -83,7 +76,7 @@ export function createCalculator() {
       displayResult,
       createButtonClear("C"),
       createButtonNumber("+/-"),
-      createButtonOperator("%"),
+      createButtonClear("%"),
       createButtonNumber("/"),
       createButtonNumber(7),
       createButtonNumber(8),
@@ -100,7 +93,7 @@ export function createCalculator() {
       createElement("span", {}),
       createButtonNumber(0),
       createButtonNumber("."),
-      createButtonOperator("="),
+      createButtonEqual("="),
       createElement("div", {
         className: "themeSwitchContainer",
         onclick: () => toggleBtnLable("themeToggle"),
@@ -119,12 +112,3 @@ export function createCalculator() {
     ],
   });
 }
-
-/*
-<label class="switch">
-  <input type="checkbox">
-  <span class="slider round"></span>
-</label>
-
-
-*/
